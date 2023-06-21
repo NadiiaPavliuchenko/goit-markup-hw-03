@@ -52,6 +52,9 @@ img {
   display: flex;
   gap: 24px;
 }
+.item {
+  width: calc((100% - 48px) / 3);
+}
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -62,10 +65,13 @@ img {
   padding: 0 15px;
 }
 .section {
-  padding-top: 120px;
+  padding: 120px 0;
 }
-.section:not(.section.advantages) {
-  padding-bottom: 120px;
+.section.services {
+  padding-top: 0;
+}
+.section.portfolio {
+  padding-top: 96px;
 }
 .title {
   letter-spacing: 0.02em;
@@ -102,10 +108,11 @@ img {
   padding: 24px 0;
 }
 .header-nav {
-  padding: 24px 0;
   display: flex;
-  gap: 77px;
   align-items: center;
+}
+.header-nav .logo {
+  margin-right: 76px;
 }
 .header-list {
   display: flex;
@@ -133,6 +140,7 @@ img {
 .nav-link {
   color: var(--primary-blue-color);
   font-weight: 500;
+  padding: 24px 0;
 }
 .address-link {
   color: var(--primary-text-color);
@@ -145,7 +153,7 @@ img {
   padding: 188px 0;
 }
 .hero-title {
-  width: 496px;
+  max-width: 496px;
   margin: 0 auto;
   font-weight: 700;
   font-size: 56px;
@@ -163,6 +171,7 @@ img {
   letter-spacing: 0.04em;
   display: block;
   border-radius: 4px;
+  cursor: pointer;
 }
 .hero-btn {
   background-color: var(--primary-iris-color);
@@ -170,10 +179,10 @@ img {
   padding: 16px 32px;
   border: none;
   margin: 0 auto;
+  min-width: 169px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
-  cursor: pointer;
   background-color: var(--primary-ocean-color);
 }
 
@@ -181,7 +190,6 @@ img {
 .advantages-item {
   width: calc((100% - 72px) / 4);
 }
-
 /*3section*/
 .team {
   background-color: var(--primary-cloud-color);
@@ -194,13 +202,16 @@ img {
 .card-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 32px 16px;
+  padding: 32px 16px;
 }
-
+.card-title,
+.card-text {
+  text-align: center;
+}
 /*footer*/
 .footer {
   background-color: var(--primary-blue-color);
+  padding: 100px 0;
 }
 .footer-accent {
   color: var(--primary-cloud-color);
@@ -212,10 +223,6 @@ img {
 .footer-text {
   color: var(--primary-cloud-color);
   width: 264px;
-}
-.footer-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 /*portfolio*/
@@ -236,24 +243,18 @@ img {
 .portfolio-btn:focus {
   background-color: var(--primary-ocean-color);
   color: var(--primary-white-color);
-  cursor: pointer;
+  border: 1px solid transparent;
 }
 .button-list {
-  width: 586px;
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 72px;
 }
 .net-list {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 24px;
+  row-gap: 48px;
   margin: 0;
   padding: 0;
-}
-.net-list .item {
-  width: calc((100% - 48px) / 3);
 }
 .portfolio-card-content {
   border: 1px solid var(--primary-cornflower-color);
